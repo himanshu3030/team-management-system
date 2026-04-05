@@ -1,10 +1,11 @@
 import Image from "next/image";
-import prisma from "./lib/db";
+import prisma from "../app/lib/db";
+// import { Home2 } from "../app/(main)/page";
 
 
 
 export default async function Home() {
-  const user = await prisma.user.findMany()
+  // const user = await prisma.user.findMany()
   return (
     // <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
     //   <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
@@ -65,13 +66,17 @@ export default async function Home() {
     //     </div>
     //   </main>
     // </div>
+    // <div>
+    //   {user.map((u) => (
+    //     <li key={u.email}>
+    //       <p>{u.email}</p>
+    //       <p>{u.name}</p>
+    //     </li>
+    //   ))}
+    // </div>
+    // <Home2/>
     <div>
-      {user.map((u) => (
-        <li key={u.email}>
-          <p>{u.email}</p>
-          <p>{u.name}</p>
-        </li>
-      ))}
+      
     </div>
-  );
+  )
 }

@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
 
         console.error("Logined failed")
         return NextResponse.json({
-            error: "Internal server error something went wrong",
+            error: "Internal server error, Something went wrong",
         }, { status: 500 })
 
     }
