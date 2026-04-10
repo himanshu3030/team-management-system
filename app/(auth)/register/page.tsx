@@ -30,7 +30,10 @@ const RegisterPage = () => {
                 window.location.href = '/dashboard'
                 return { success: true };
             } catch (error) {
-                error: error instanceof Error ? error.message : "Registration failed"
+                return{
+                    success: false,
+                    error: error instanceof Error ? error.message : "Registration failed"
+                }
             }
         },
         { error: undefined, success: undefined }

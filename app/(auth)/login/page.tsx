@@ -26,7 +26,11 @@ const LoginPage = () => {
                 window.location.href = '/dashboard'
                 return { success: true };
             } catch (error) {
-                error: error instanceof Error ? error.message : "Login failed"
+                return{
+                    success: false,
+                    error: error instanceof Error ? error.message : "Login failed"
+                }
+                
             }
         },
         { error: undefined, success: undefined }
